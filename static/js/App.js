@@ -9,3 +9,4 @@ window.addEventListener("scroll", () => {
     setTimeout(() => navbar.classList.remove("fixed-top"), 300);
   }
 })
+

@@ -1,8 +1,30 @@
-button {
+.slbtn {
   margin-left: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100px;
 }
 
 p {
   margin-left: 10px;
   color: black;
+}
+
+.slide {
+  background-color: #333;
+  border-radius: 10px;
+  margin-left: 10px;
+  height: 140px;
+  width: 140px;
+  padding: 20px;
+  display: none;
+}
+.slide p {
+  color: whitesmoke;
 }
