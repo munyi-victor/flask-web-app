@@ -1,35 +1,50 @@
-{% extends 'base.html' %}
-
-{% block title %}Login Page{% endblock %}
-
-
-{% block content %}
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        {% for msg in messages %}
-          <p class="text-success">{{msg}}</p>
-        {% endfor %}
-      {% endif %}
-    {% endwith %}
+{% extends 'base.html' %} {% block title %}Signup Page{% endblock %} {% block
+content %} {% with messages = get_flashed_messages() %} {% if messages %} {% for
+msg in messages %}
+<p class="text-success">{{msg}}</p>
+{% endfor %} {% endif %} {% endwith %}
+<div class="d-flex justify-content-center">
   <div class="w-50 border border-dark rounded-2 p-3">
     <h2>Sign up</h2>
     <form action="{{url_for('register')}}" method="post">
       <div class="form-group">
         <label for="name" class="sr-only">Name:</label>
-        <input type="text" name="name" placeholder="Enter name" class="form-control mb-2" required/>
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter name"
+          class="form-control mb-2"
+          required
+        />
       </div>
       <div class="form-group">
         <label for="email" class="sr-only">Email:</label>
-        <input type="email" name="email" placeholder="Enter email" class="form-control mb-2" required/>
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter email"
+          class="form-control mb-2"
+          required
+        />
       </div>
       <div class="form-group">
         <label for="password" class="sr-only">Password:</label>
-        <input type="password" name="password" placeholder="Enter password" class="form-control mb-2" required/>
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter password"
+          class="form-control mb-2"
+          required
+        />
       </div>
 
       <button type="submit" class="btn btn-success mb-2">Submit</button>
     </form>
 
-    <p>Already have an account? <a class="text-primary" href="{{ url_for('auth.login') }}">Log in</a></p>
+    <p>
+      Already have an account?
+      <a class="text-primary" href="{{ url_for('auth.login') }}">Log in</a>
+    </p>
   </div>
+</div>
 {% endblock %}
